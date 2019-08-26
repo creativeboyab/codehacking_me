@@ -27,8 +27,8 @@
             {!! Form::select('is_active', [0 => 'In Active', 1 => 'Active'], null, ['class' => 'custom-select', 'id' => 'preferenceselect']) !!}
         </div>
         <div class="form-group">
-            {!! Form::label('avatar', 'Profile Picture:'); !!}
-            {!! Form::file('photo_id', ['class' => 'form-control-file', 'id' => 'avatar']); !!}
+            {!! Form::label('photo_id', 'Profile Picture:'); !!}
+            {!! Form::file('photo_id', ['class' => 'form-control-file', 'id' => 'photo_id']); !!}
         </div>
         {!! Form::submit('submit', ['class' => 'btn btn-primary btn-block']); !!}
     {!! Form::close() !!}
