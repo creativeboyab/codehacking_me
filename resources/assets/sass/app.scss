@@ -1,5 +1,47 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
 #admin-page{
   padding-top: 0px;
+}
+.navbar-top-links {
+    .dropdown-user{
+        height: auto;
+    }
+}
+#main-menu{
+  border-bottom: 1px solid #e7e7e7;
+  a {
+    &.btn{
+      background: none;
+      color: #222;
+      border: 0px;
+    }
+  }
+}
+.sidebar {
+  margin-top: 0px !important;
+  .search-form  {
+    button{
+      background: #fff;
+      border: 1px solid #ced4da;
+      border-radius: 0px .25rem .25rem 0px;
+      border-left: 0px;
+    }
+  }
+  ul{
+    &#side-menu{
+      li{
+        display: block;
+        width: 100%;
+        a{
+          display: block;
+          padding: 10px 15px;
+          text-decoration: none;
+          color: #222;
+          &:hover{
+            background: #EAEAEB;
+          }
+        }
+      }
+    }
+  }
 }

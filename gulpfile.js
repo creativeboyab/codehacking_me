@@ -22,8 +22,9 @@ elixir(function(mix) {
         'libs/styles.css',
     ], './public/css/libs.css')
     .scripts([
-        'libs/jquery.js',
+        'libs/jquery-3.3.1.slim.min.js',
         'libs/bootstrap.min.js',
+        'libs/popper.min.js',
         'libs/metisMenu.js',
         'libs/sb-admin-2.js',
         'libs/scripts.js',
