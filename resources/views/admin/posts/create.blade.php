@@ -12,7 +12,7 @@
         {{-- Category --}}
         <div class="form-group">
             {!! Form::label('category_id', 'Category:'); !!}
-            {!! Form::select('category_id', ['' => 'Choose Category'], null, ['class' => 'custom-select', 'id' => 'category_id']) !!}
+            {!! Form::select('category_id', ['' => 'Choose Category'] + $categories, null, ['class' => 'custom-select', 'id' => 'category_id']) !!}
         </div>
         {{-- Body --}}
         <div class="form-group">
