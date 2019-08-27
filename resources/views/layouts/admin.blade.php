@@ -27,7 +27,7 @@
         <a class="navbar-brand">Navbar</a>
         <div class="dropdown">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-user fa-fw"></i>
+                <i class="fa fa-user fa-fw"></i> {{ Auth::user()->name }}
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -56,11 +56,9 @@
                         <li>
                             <a href="{{route('admin.users.index')}}">All Users</a>
                         </li>
-
                         <li>
                             <a href="{{route('admin.users.create')}}">Create User</a>
                         </li>
-
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
@@ -68,13 +66,11 @@
                     <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/posts">All Posts</a>
+                            <a href="{{route('admin.posts.index')}}">All Posts</a>
                         </li>
-
                         <li>
-                            <a href="/posts/create">Create Post</a>
+                            <a href="{{route('admin.posts.create')}}">Create Post</a>
                         </li>
-
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>

@@ -20,4 +20,6 @@ class Photo extends Model
     {
         return $this->directory . $photo;
     }
+
+
 }

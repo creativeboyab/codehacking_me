@@ -2,7 +2,9 @@
 
 @section('content')
     <h1>Users</h1>
-
+    @if(Session::has('deleted_user'))
+        <div class="alert alert-info">{{session('deleted_user')}}</div>
+    @endif
     <table class="table table-striped">
         <thead>
         <tr>

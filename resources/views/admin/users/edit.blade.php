@@ -35,5 +35,13 @@
     </div>
     {!! Form::submit('submit', ['class' => 'btn btn-primary btn-block']); !!}
     {!! Form::close() !!}
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    {!! Form::model($user, [ 'method' => 'DELETE', 'action' => ['AdminUsersController@destroy', $user->id] ]) !!}
+        {!! Form::submit('Delete User', ['class' => 'btn btn-danger btn-block']); !!}
+    {!! Form::close() !!}
     @include('includes.form_error');
 @endsection
