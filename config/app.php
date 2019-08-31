@@ -163,6 +163,9 @@ return [
         // eloquent-sluggable
         Cviebrock\EloquentSluggable\ServiceProvider::class,
 
+        // Laravel File Manager
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
