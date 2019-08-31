@@ -20,7 +20,7 @@ elixir(function(mix) {
         'libs/metisMenu.css',
         'libs/sb-admin-2.css',
         'libs/styles.css',
-    ], './public/css/libs.css')
+    ], './front/css/libs.css')
     .scripts([
         'libs/jquery-3.3.1.slim.min.js',
         'libs/bootstrap.min.js',
@@ -28,5 +28,5 @@ elixir(function(mix) {
         'libs/metisMenu.js',
         'libs/sb-admin-2.js',
         'libs/scripts.js',
-    ], './public/js/libs.js')
+    ], './front/js/libs.js')
 });

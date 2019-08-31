@@ -45,3 +45,58 @@
     }
   }
 }
+
+//Font End Blog
+#blog_menu{
+  background: #fff;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 30px;
+}
+.well {
+  background: #F5F1F5;
+  border: 1px solid #EBE5E6;
+  padding: 15px 15px;
+  margin-bottom: 20px;
+}
+.media {
+  display: inline-block !important;
+  margin-top: 15px;
+  width: 100%;
+  .media-body {
+    margin-left: 15px;
+  }
+  .pull-left {
+    margin-right: 15px;
+  }
+ .media {
+    .pull-left {
+      margin-left: 63px;
+    }
+   .media-body {
+     margin-left: 20px;
+   }
+   form {
+     margin-left: 20px;
+     margin-top: 10px;
+   }
+  }
+}
+
+.comment-reply{
+  display: none;
+}
+
+.comment-reply-container {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.comment-primary-reply-container {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+}

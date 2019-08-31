@@ -148,6 +148,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Application Service Providers...
          */
@@ -158,6 +159,9 @@ return [
 
         // LaravelCollective
         Collective\Html\HtmlServiceProvider::class,
+
+        // eloquent-sluggable
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class
 
     ],
 
