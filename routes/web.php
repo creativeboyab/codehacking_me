@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 
 
-//Route::get('/home', 'HomeController@index');
-
+Route::get('/home', 'HomeController@index');
+Route::get('/post/{id}', 'AdminPostsController@post')->name('home.post');
 
 Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin', function () {
@@ -32,7 +32,7 @@ Route::group(['middleware' => 'admin'], function () {
         'show'      => 'admin.users.show',
         'edit'      => 'admin.users.edit',
     ]]);
-    Route::get('/post/{id}', 'AdminPostsController@post')->name('home.post');
+
     Route::resource('admin/posts', 'AdminPostsController', ['names' => [
         'index'     => 'admin.posts.index',
         'create'    => 'admin.posts.create',
