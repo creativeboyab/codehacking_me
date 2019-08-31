@@ -19,7 +19,7 @@
         @foreach($comments as $comment)
         <tr>
           <th scope="row">{{$comment->id}}</th>
-          <td>{{$comment->post->title}}<br><a href="{{route('home.post', $comment->post->slug)}}" target="_blank">View Post</a> | <a href="{{route('admin.comment.replies.show', $comment->id)}}" target="_blank">View Replies</a></td>
+          <td>{{$comment->post->title}}<br><a href="{{route('home.post', $comment->post->slug)}}" target="_blank">View Post</a> | <a href="{{route('admin.comments.replies.show', $comment->id)}}" target="_blank">View Replies</a></td>
           <td>{{$comment->author}}</td>
           <td>{{$comment->email}}</td>
           <td>{{$comment->body}}</td>

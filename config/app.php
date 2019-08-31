@@ -161,7 +161,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
 
         // eloquent-sluggable
-        Cviebrock\EloquentSluggable\SluggableServiceProvider::class
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
 
     ],
 
