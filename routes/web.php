@@ -51,6 +51,7 @@ Route::group(['middleware' => 'admin'], function () {
         'show'      => 'admin.media.show',
         'edit'      => 'admin.media.edit',
     ]]);
+    Route::delete('admin/delete/media', 'AdminMediaController@deleteMedia')->name('admin.media.delete');
     Route::resource('admin/comment/replies', 'AdminCommentReplyController', ['names' => [
         'index'     => 'admin.comments.replies.index',
         'create'    => 'admin.comments.replies.create',

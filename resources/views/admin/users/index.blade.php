@@ -26,8 +26,8 @@
                 <td><a href="{{route('admin.users.edit', $user->id)}}">{{$user->name}}</a></td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->is_active == 1 ? 'Active' : 'Inactive'}}</td>
-                <td>{{$user->created_at->diffForHumans()}}</td>
-                <td>{{$user->updated_at->diffForHumans()}}</td>
+                <td>{{$user->created_at ? $user->created_at->diffForHumans() : '' }}</td>
+                <td>{{$user->updated_at ? $user->updated_at->diffForHumans() : '' }}</td>
                 <td>{{$user->role ? $user->role->name : 'User Has No Role'}}</td>
             </tr>
         @endforeach

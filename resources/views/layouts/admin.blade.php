@@ -11,8 +11,8 @@
 
     <!-- Bootstrap Core CSS -->
     @yield('style')
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -38,148 +38,134 @@
         </div>
     </nav>
 
+
+
     <div class="navbar-default sidebar" role="navigation" >
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-                <li class="sidebar-search">
-                    <div class="input-group search-form">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                    </div>
-                    <!-- /input-group -->
-                </li>
-                <li>
-                    <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i>Users<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="{{route('admin.users.index')}}">All Users</a>
-                        </li>
-                        <li>
-                            <a href="{{route('admin.users.create')}}">Create User</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="{{route('admin.posts.index')}}">All Posts</a>
-                        </li>
-                        <li>
-                            <a href="{{route('admin.posts.create')}}">Create Post</a>
-                        </li>
-                        <li>
-                            <a href="{{route('admin.comments.index')}}">All Comments</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="{{route('admin.categories.index')}}"><i class="fa fa-wrench fa-fw"></i> Categories</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i>Media<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="{{route('admin.media.index')}}">All Media</a>
-                        </li>
+        <div class="wrapper">
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components" id="side-menu">
+                    <li class="sidebar-search">
+                        <div class="input-group search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                        <!-- /input-group -->
+                    </li>
+                    <li>
+                        <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#userMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-wrench fa-fw"></i>Users</a>
+                        <ul class="collapse list-unstyled" id="userMenu">
+                            <li>
+                                <a href="{{route('admin.users.index')}}">All Users</a>
+                            </li>
+                            <li>
+                                <a href="{{route('admin.users.create')}}">Create User</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#postMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-wrench fa-fw"></i>Posts</a>
+                        <ul class="collapse list-unstyled" id="postMenu">
+                            <li>
+                                <a href="{{route('admin.posts.index')}}">All Posts</a>
+                            </li>
+                            <li>
+                                <a href="{{route('admin.posts.create')}}">Create Post</a>
+                            </li>
+                            <li>
+                                <a href="{{route('admin.comments.index')}}">All Comments</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.categories.index')}}"><i class="fa fa-wrench fa-fw"></i> Categories</a>
+                    </li>
+                    <li>
+                        <a href="#mediaMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-wrench fa-fw"></i>Media</a>
+                        <ul class="collapse list-unstyled" id="mediaMenu">
+                            <li>
+                                <a href="{{route('admin.media.index')}}">All Media</a>
+                            </li>
 
-                        <li>
-                            <a href="{{route('admin.media.create')}}">Upload Media</a>
-                        </li>
-
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="flot.html">Flot Charts</a>
-                        </li>
-                        <li>
-                            <a href="morris.html">Morris.js Charts</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-                </li>
-                <li>
-                    <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="panels-wells.html">Panels and Wells</a>
-                        </li>
-                        <li>
-                            <a href="buttons.html">Buttons</a>
-                        </li>
-                        <li>
-                            <a href="notifications.html">Notifications</a>
-                        </li>
-                        <li>
-                            <a href="typography.html">Typography</a>
-                        </li>
-                        <li>
-                            <a href="icons.html"> Icons</a>
-                        </li>
-                        <li>
-                            <a href="grid.html">Grid</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">Second Level Item</a>
-                        </li>
-                        <li>
-                            <a href="#">Second Level Item</a>
-                        </li>
-                        <li>
-                            <a href="#">Third Level <span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-third-level -->
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li class="active">
-                    <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a class="active" href="blank.html">Blank Page</a>
-                        </li>
-                        <li>
-                            <a href="login.html">Login Page</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-            </ul>
+                            <li>
+                                <a href="{{route('admin.media.create')}}">Upload Media</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#chartMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
+                        <ul class="collapse list-unstyled" id="chartMenu">
+                            <li>
+                                <a href="flot.html">Flot Charts</a>
+                            </li>
+                            <li>
+                                <a href="morris.html">Morris.js Charts</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.categories.index')}}"><i class="fa fa-table fa-fw"></i> Tables</a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.categories.index')}}"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                    </li>
+                    <li>
+                        <a href="#ulMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-wrench fa-fw"></i> UI Elements</a>
+                        <ul class="collapse list-unstyled" id="ulMenu">
+                            <li>
+                                <a href="panels-wells.html">Panels and Wells</a>
+                            </li>
+                            <li>
+                                <a href="buttons.html">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="notifications.html">Notifications</a>
+                            </li>
+                            <li>
+                                <a href="typography.html">Typography</a>
+                            </li>
+                            <li>
+                                <a href="icons.html"> Icons</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">Grid</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#multiMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown</a>
+                        <ul class="collapse list-unstyled" id="multiMenu">
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#multiMenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Third Level</a>
+                                <ul class="collapse list-unstyled" id="multiMenu2">
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-third-level -->
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <!-- /.sidebar-collapse -->
     </div>
